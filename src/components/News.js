@@ -28,7 +28,7 @@ export class News extends Component {
     }
 
     async componentDidMount(){
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f91a1c3f7d894e00ac8436bd85bd2f5f&page=1&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8b24e1ef076f4eeb82db4e8e6d2940c4&page=1&pageSize=${this.props.pageSize}`;
         this.setState({loading:true})
         let data = await fetch(url);
         let parsedData = await data.json();
@@ -41,7 +41,7 @@ export class News extends Component {
     }
 
     handlePreviousClick = async ()=>{
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f91a1c3f7d894e00ac8436bd85bd2f5f&page=${this.state.page-1}&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8b24e1ef076f4eeb82db4e8e6d2940c4&page=${this.state.page-1}&pageSize=${this.props.pageSize}`;
         this.setState({loading:true})
         let data = await fetch(url);
         let parsedData = await data.json();
@@ -59,7 +59,7 @@ export class News extends Component {
 
     handleNextClick = async ()=>{
         if(!(this.state.page+1 > Math.ceil(this.state.totalResults/this.props.pageSize))){
-            let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=f91a1c3f7d894e00ac8436bd85bd2f5f&page=${this.state.page+1}&pageSize=${this.props.pageSize}`;
+            let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8b24e1ef076f4eeb82db4e8e6d2940c4&page=${this.state.page+1}&pageSize=${this.props.pageSize}`;
             this.setState({loading:true})
             console.log(this.state.page+1);
             let data = await fetch(url);
@@ -81,9 +81,9 @@ export class News extends Component {
                 <h2 className="text-center mb-5">NewsMonkey - Top Headlines</h2>
                 {this.state.loading && <Spinner/>}
                 <div className="row">
-                    {!this.state.loading && this.state.articles.map((element)=>{
+                    {!(this.state.loading ) && this.state.articles.map((element)=>{
                         return  <div className="col-md-4" key={element.url}>
-                        <NewsItem  title={element.title?element.title:""} description={element.description?element.description:""} imageUrl={element.urlToImage} newsUrl={element.url}/>
+                        <NewsItem  title={element.title?element.title:""} description={element.description?element.description:""} imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name}/>
                         </div>    
                     })}
                 </div>
