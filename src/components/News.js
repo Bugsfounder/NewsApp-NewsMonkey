@@ -31,16 +31,20 @@ export class News extends Component {
         )} - NewsMonkey`;
     }
 
-    async updateNews(pageNumber) {
-        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8b24e1ef076f4eeb82db4e8e6d2940c4&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    async updateNews() {
+        this.props.setProgress(10);
+        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         this.setState({ loading: true });
         let data = await fetch(url);
+        this.props.setProgress(30);
         let parsedData = await data.json();
+        this.props.setProgress(70);
         this.setState({
             articles: parsedData.articles,
             totalResults: parsedData.totalResults,
             loading: false,
         });
+        this.props.setProgress(100);
     }
 
     async componentDidMount() {
@@ -59,7 +63,7 @@ export class News extends Component {
 
     fetchMoreData = async () => {
         this.setState({ page: this.state.page + 1 });
-        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8b24e1ef076f4eeb82db4e8e6d2940c4&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         // this.setState({ loading: true });
         let data = await fetch(url);
         let parsedData = await data.json();
@@ -73,7 +77,7 @@ export class News extends Component {
     render() {
         return (
             <>
-                <h2 className="text-center mb-5">
+                <h2 className="text-center my-3">
                     NewsMonkey - Top{" "}
                     {this.props.category.replace(/(^|\s)\S/g, (letter) =>
                         letter.toUpperCase()
