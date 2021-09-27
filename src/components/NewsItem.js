@@ -12,7 +12,7 @@ export class NewsItem extends Component {
                 <div className="card">
                     <img src={imageUrl ? imageUrl : "https://images.wsj.net/im-407095/social"} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <h5 style={{ display: 'inline' }} className="card-title">{title}</h5>  <span style={{ zIndex: '4', left: '90%' }} class="position-absolute top-0 translate-middle badge rounded-pill bg-danger">
+                        <h5 style={{ display: 'inline' }} className="card-title">{title}</h5>  <span style={{ zIndex: '4', left: '90%' }} className="position-absolute top-0 translate-middle badge rounded-pill bg-danger">
                             {source}
                         </span>
                         <p className="card-text">{description}...</p>
