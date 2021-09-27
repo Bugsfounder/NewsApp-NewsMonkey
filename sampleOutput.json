@@ -1,0 +1,58 @@
+{
+    "status": "ok",
+    "totalResults": 4,
+    "articles": [
+        {
+            "source": {
+                "id": "cbs-news",
+                "name": "CBS News"
+            },
+            "author": "CBS News",
+            "title": "What's at stake for Germany as Chancellor Angela Merkel leaves world stage?",
+            "description": "Germany's parliamentary elections are underway, and the exit of chancellor Angela Merkel could have a massive influence on politics in Europe and around the world. Jeffrey Rathke, president of the American Institute for Contemporary German Studies at Johns Ho…",
+            "url": "https://www.cbsnews.com/video/germanys-direction-as-chancellor-angela-merkel-leaves-world-stage/",
+            "urlToImage": "https://cbsnews3.cbsistatic.com/hub/i/r/2021/09/26/017a7283-7d50-41f0-b415-77b61b01d648/thumbnail/1200x630/4730d2022e4286081d18d00b2965d2e5/cbsn-fusion-germanys-direction-as-chancellor-angela-merkel-leaves-world-stage-thumbnail-801731-640x360.jpg",
+            "publishedAt": "2021-09-26T19:28:29+00:00",
+            "content": "Watch CBSN Live\r\nCopyright © 2021 CBS Interactive Inc. All rights reserved.\r\nGet browser notifications for breaking news, live events, and exclusive reporting.\r\nNot NowTurn On"
+        },
+        {
+            "source": {
+                "id": "breitbart-news",
+                "name": "Breitbart News"
+            },
+            "author": "Jeff Poor",
+            "title": "Donald Trump Gets Big Numbers at Georgia Rally as GOP Pushes to Flip State Back to Red",
+            "description": "PERRY, Georgia -- If Republicans hope to return the Peach State back to the GOP column in 2022 and beyond, Saturday's appearance by former President Donald Trump at the Georgia National Fairgrounds was a hopeful sign. | Politics",
+            "url": "https://www.breitbart.com/politics/2021/09/26/donald-trump-gets-big-numbers-at-georgia-rally-as-gop-pushes-to-flip-state-back-to-red/",
+            "urlToImage": "https://media.breitbart.com/media/2021/09/Front-640x335.jpg",
+            "publishedAt": "2021-09-26T16:01:19Z",
+            "content": "PERRY, Georgia — If Republicans hope to return the Peach State back to the GOP column in 2022 and beyond, Saturday’s appearance by former President Donald Trump at the Georgia National Fairgrounds wa… [+2010 chars]"
+        },
+        {
+            "source": {
+                "id": "the-washington-times",
+                "name": "The Washington Times"
+            },
+            "author": "The Washington Times http://www.washingtontimes.com",
+            "title": "Latest Quizzes",
+            "description": "Take a break from the hard news of the day and enjoy a quiz on entertainment, sports, history and politics only from The Washington Times.",
+            "url": "https://www.washingtontimes.com/quiz/",
+            "urlToImage": null,
+            "publishedAt": "2021-02-10T03:52:37.2719772Z",
+            "content": "Featured Quizzes\r\nAttention all William Shakespeare experts. Pinpoint the prose's origin plucked from one of his many famous plays in this multiple-choice challenge.\r\n Shares \r\nName these legendary c… [+32652 chars]"
+        },
+        {
+            "source": {
+                "id": "the-jerusalem-post",
+                "name": "The Jerusalem Post"
+            },
+            "author": null,
+            "title": "Congresswoman Nita Lowey: I am proud to stand with Israel",
+            "description": "Gantz: Security of Israel is above politics; PA: This is a crime.",
+            "url": "https://www.jpost.com/Arab-Israeli-Conflict/Gantz-Security-of-Israel-is-above-politics-Palestinians-This-is-a-crime-607595",
+            "urlToImage": "https://images.jpost.com/image/upload/f_auto,fl_lossy/t_Article2016_ControlFaceDetect/448812",
+            "publishedAt": "2019-11-13T04:41:00Z",
+            "content": "US Ambassador David M. Friedman said the US stands “with our friend and ally Israel at this critical moment” on social media on Tuesday after roughly 170 rockets were fired on Israel from the Gaza St… [+6160 chars]"
+        }
+    ]
+}
