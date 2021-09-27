@@ -11,10 +11,6 @@ const News = (props)=> {
     const [page, setPage] = useState(1);    
     const [totalResults, setTotalResults] = useState(0);
 
-    // document.title = `${props.category.replace(/(^|\s)\S/g, (letter) =>
-    //     letter.toUpperCase()
-    // )} - NewsMonkey`;
-
 
     const updateNews = async ()=> {
         props.setProgress(10);
@@ -32,22 +28,18 @@ const News = (props)=> {
     }
 
     useEffect(()=>{
-      updateNews();
+        
+        document.title = `${props.category.replace(/(^|\s)\S/g, (letter) =>
+            letter.toUpperCase()
+        )} - NewsMonkey`;
+        
+        updateNews();
+      // eslint-disable-next-line
     },[]);
 
-    const handlePreviousClick = async () => {
-        setPage(page-1);
-        updateNews();
-    };
-
-    const handleNextClick = async () => {
-        setPage(page+1);
-        updateNews();
-    };
-
     const fetchMoreData = async () => {
+        const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page+1}&pageSize=${props.pageSize}`;
         setPage(page+1);
-        const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
         let data = await fetch(url);
         let parsedData = await data.json();
         setArticles(articles.concat(parsedData.articles));
@@ -58,7 +50,7 @@ const News = (props)=> {
 
     return (
         <>
-            <h2 className="text-center my-3">
+            <h2 className="text-center" style={{margin: '85px 0px 27px 0px'}}>
                 NewsMonkey - Top{" "}
                 {props.category.replace(/(^|\s)\S/g, (letter) =>
                     letter.toUpperCase()
